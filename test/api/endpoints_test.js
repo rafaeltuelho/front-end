@@ -7,13 +7,13 @@
   describe("endpoints", function() {
     describe("catalogueUrl", function() {
       it("points to the proper endpoint", function() {
-        expect(endpoints.catalogueUrl).to.equal("http://catalogue");
+        expect(endpoints.catalogueAggregatorUrl).to.equal("http://shop-catalogue-api-aggregator");
       });
     });
 
     describe("tagsUrl", function() {
       it("points to the proper endpoint", function() {
-        expect(endpoints.tagsUrl).to.equal("http://catalogue/tags");
+        expect(endpoints.tagsAggregatorUrl).to.equal("http://shop-catalogue-api-aggregator/catalogue/tags");
       });
     });
 
