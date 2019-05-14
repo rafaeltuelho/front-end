@@ -2,6 +2,11 @@
 
 set -ev
 
+if [[ -z "$REGISTRY_SERVER" ]] ; then
+    echo "Cannot find REGISTRY_SERVER env var"
+    exit 1
+fi
+
 if [[ -z "$GROUP" ]] ; then
     echo "Cannot find GROUP env var"
     exit 1
@@ -31,7 +36,7 @@ tag_and_push_all() {
     else
         TAG=$1
     fi
-    DOCKER_REPO=${GROUP}/${REPO}
+    DOCKER_REPO=${REGISTRY_SERVER}/${GROUP}/${REPO}
     if [[ "$COMMIT" != "$TAG" ]]; then
         docker tag ${DOCKER_REPO}:${COMMIT} ${DOCKER_REPO}:${TAG}
     fi

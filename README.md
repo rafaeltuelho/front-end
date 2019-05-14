@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/microservices-demo/front-end.svg?branch=master)](https://travis-ci.org/microservices-demo/front-end)
+[![Build Status](https://travis-ci.org/rafaeltuelho/front-end.svg?branch=shop-aggregator)](https://travis-ci.org/rafaeltuelho/front-end)
 [![](https://images.microbadger.com/badges/image/weaveworksdemos/front-end.svg)](http://microbadger.com/images/weaveworksdemos/front-end "Get your own image badge on microbadger.com")
 
 
 Front-end app
 ---
-Front-end application written in [Node.js](https://nodejs.org/en/) that puts together all of the microservices under [microservices-demo](https://github.com/microservices-demo/microservices-demo).
+Front-end application written in [Node.js](https://nodejs.org/en/) that puts together all of the microservices under [microservices-demo](https://github.com/rafaeltuelho/microservices-demo).
 
 # Build
 
@@ -94,4 +94,4 @@ make e2e
 
 # Push
 
-`GROUP=weaveworksdemos COMMIT=test ./scripts/push.sh`
+`REGISTRY_SERVER=quay.io GROUP=rafaeltuelho COMMIT=test ./scripts/push.sh`
