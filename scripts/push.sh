@@ -36,11 +36,11 @@ tag_and_push_all() {
     else
         TAG=$1
     fi
-    DOCKER_REPO=${REGISTRY_SERVER}/${GROUP}/${REPO}
+    DOCKER_REPO=${GROUP}/${REPO}
     if [[ "$COMMIT" != "$TAG" ]]; then
-        docker tag ${DOCKER_REPO}:${COMMIT} ${DOCKER_REPO}:${TAG}
+        docker tag ${DOCKER_REPO}:${COMMIT} ${REGISTRY_SERVER}/${DOCKER_REPO}:${TAG}
     fi
-    push "$DOCKER_REPO:$TAG";
+    push "${REGISTRY_SERVER}/$DOCKER_REPO:$TAG";
 }
 
 # Push snapshot when in master

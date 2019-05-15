@@ -26,6 +26,7 @@ after_success:
   - if [ -z "${DOCKER_PASS}" ]; then echo "Build triggered by external PR. Skipping docker push" && exit 0; fi
   - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin ${REGISTRY_SERVER}
   - ./scripts/build.sh
+  - docker images
   - ./test/container.sh
   - ./scripts/push.sh
 #notifications:
