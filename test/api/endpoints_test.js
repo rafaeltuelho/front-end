@@ -7,13 +7,13 @@
   describe("endpoints", function() {
     describe("catalogueUrl", function() {
       it("points to the proper endpoint", function() {
-        expect(endpoints.catalogueAggregatorUrl).to.equal("http://shop-catalogue-api-aggregator:8080/camel");
+        expect(endpoints.catalogueAggregatorUrl).to.equal("http://shop-catalogue-aggregator:8080/camel");
       });
     });
 
     describe("tagsUrl", function() {
       it("points to the proper endpoint", function() {
-        expect(endpoints.tagsAggregatorUrl).to.equal("http://shop-catalogue-api-aggregator:8080/camel/catalogue/tags");
+        expect(endpoints.tagsAggregatorUrl).to.equal("http://shop-catalogue-aggregator:8080/camel/catalogue/tags");
       });
     });
 

@@ -16,8 +16,8 @@
 
   module.exports = {
     //@TODO: change catalogue and tags endpoints URL
-    catalogueAggregatorUrl:  util.format("http://shop-catalogue-api-aggregator%s:8080/camel", domain),
-    tagsAggregatorUrl:       util.format("http://shop-catalogue-api-aggregator%s:8080/camel/catalogue/tags", domain),
+    catalogueAggregatorUrl:  util.format("http://shop-catalogue-aggregator%s:8080/camel", domain),
+    tagsAggregatorUrl:       util.format("http://shop-catalogue-aggregator%s:8080/camel/catalogue/tags", domain),
     socksCatalogueUrl:  util.format("http://catalogue%s", domain),
     shoesCatalogueUrl:  util.format("http://shoes-catalogue-application%s:8080", domain),
     cartsUrl:      util.format("http://carts%s/carts", domain),
